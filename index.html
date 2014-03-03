@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Opencdf : Contact Discovery Framework" />
+    <meta name="description" content="OpenCDF : Contact Discovery Framework" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Opencdf</title>
+    <title>OpenCDF</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/azanetti/opencdf">View on GitHub</a>
 
-          <h1 id="project_title">Opencdf</h1>
+          <h1 id="project_title">OpenCDF</h1>
           <h2 id="project_tagline">Contact Discovery Framework</h2>
 
             <section id="downloads">
@@ -31,44 +31,119 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="contact-discovery-framework" class="anchor" href="#contact-discovery-framework"><span class="octicon octicon-link"></span></a>Contact Discovery Framework</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h2>
+<a name="purpose" class="anchor" href="#purpose"><span class="octicon octicon-link"></span></a>Purpose</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>The <strong>Contact Discovery Framework</strong>, <em>CDF in short</em>, is a solution to get contact information from entities or services by using <a href="http://en.wikipedia.org/wiki/DNS">Domain Name System</a> (DNS).
+CDF uses DNS TXT records to store contact information associated to a domain thus an entity.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>The following example is a CDF record defining the email address that need to be used to contact opencdf.org entity:</p>
+
+<pre><code>opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>
+<a name="why-using-dns-to-store-information" class="anchor" href="#why-using-dns-to-store-information"><span class="octicon octicon-link"></span></a>Why using DNS to store information?</h2>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>DNS is a distributed, delegated, cached, fault tolerant service used by all ISP and hosting services.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Using DNS TXT records is a simple and effective way to store and retrieve contact information.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>DNS protocol is a low-level, well-know protocol implemented in all programming language.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>
+<a name="how-to-setup-cdf-records" class="anchor" href="#how-to-setup-cdf-records"><span class="octicon octicon-link"></span></a>How to setup CDF records?</h2>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>CDF records are new TXT DNS records added to your domain zone file.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The first part of a CDF records is the CDF version used.
+<code>v=cdf1</code> means version 1 of CDF.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>CDF attributes followed the version. Each piece of contact information can be defined by its own attribute.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>For instance, <code>c:email</code> defines the email that should be used to contact the entity.
+Then, following the attribute name is the actual value of the attribute.</p>
+
+<h2>
+<a name="list-of-the-current-supported-attributes" class="anchor" href="#list-of-the-current-supported-attributes"><span class="octicon octicon-link"></span></a>List of the current supported attributes</h2>
+
+<table>
+<thead><tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Example</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>c:email</td>
+<td>Email address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"</code></td>
+</tr>
+<tr>
+<td>c:phone</td>
+<td>Phone</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:phone +33387000000"</code></td>
+</tr>
+<tr>
+<td>c:geo</td>
+<td>Geolocation (latitude,longitude)</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:geo 49.1003985,6.1835716"</code></td>
+</tr>
+<tr>
+<td>c:name</td>
+<td>Contact name</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:name Antony Zanetti"</code></td>
+</tr>
+<tr>
+<td>c:addr</td>
+<td>Full Postal Address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:addr 57 rue Lothaire, 57000 Metz, France"</code></td>
+</tr>
+<tr>
+<td>c:addr.street</td>
+<td>Street part of the postal address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:street 57 rue Lothaire"</code></td>
+</tr>
+<tr>
+<td>c:addr.city</td>
+<td>City part of the postal address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:city Metz"</code></td>
+</tr>
+<tr>
+<td>c:addr.zip</td>
+<td>Zipcode part of the postal address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.zip 57000"</code></td>
+</tr>
+<tr>
+<td>c:addr.state</td>
+<td>State part of the postal address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.state Lorraine"</code></td>
+</tr>
+<tr>
+<td>c:addr.country</td>
+<td>Country part of the postal address</td>
+<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.country France"</code></td>
+</tr>
+</tbody>
+</table><p><strong>There is no mandatory attributes</strong> and an attribute can be used more than once if needed.</p>
+
+<h2>
+<a name="copyright" class="anchor" href="#copyright"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright (c) 2014 Antony Zanetti. Released under the MIT License.</p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Opencdf maintained by <a href="https://github.com/azanetti">azanetti</a></p>
+        <p class="copyright">OpenCDF maintained by <a href="https://github.com/azanetti">azanetti</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
