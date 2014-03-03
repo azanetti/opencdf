@@ -5,12 +5,12 @@ Purpose
 -------
 
 The **Contact Discovery Framework**, *CDF in short*, is a solution to get contact information from entities or services by using [Domain Name System](http://en.wikipedia.org/wiki/DNS) (DNS).
-CDF uses DNS TXT records to store contact information associated to a domain thus an entity.
+CDF uses DNS TXT records to store contact information.
 
 Example
 -------
 
-The following example is a CDF record defining the email address that need to be used to contact opencdf.org entity:
+The following example is a CDF record defining the email address that needs to be used to contact opencdf.org entity:
 
 ```
 opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"
