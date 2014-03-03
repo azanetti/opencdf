@@ -23,7 +23,7 @@ DNS is a distributed, delegated, cached, fault tolerant service used by all ISP 
 
 Using DNS TXT records is a simple and effective way to store and retrieve contact information.
 
-DNS protocol is a low-level, well-known protocol implemented in all programming language.
+DNS protocol is a low-level, well-known protocol implemented in all programming languages.
 
 How to setup CDF records?
 -------------------------
