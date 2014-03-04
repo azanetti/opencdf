@@ -45,7 +45,7 @@ CDF uses DNS TXT records to store contact information.</p>
 
 <p>The following example is a CDF record defining the email address that needs to be used to contact opencdf.org entity:</p>
 
-<pre><code>opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"
+<pre><code>opencdf.org. 600 IN TXT "v=cdf1 c:email contact@opencdf.org"
 </code></pre>
 
 <h2>
@@ -83,52 +83,52 @@ Then, following the attribute name is the actual value of the attribute.</p>
 <tr>
 <td>c:email</td>
 <td>Email address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:email contact@opencdf.org"</code></td>
 </tr>
 <tr>
 <td>c:phone</td>
 <td>Phone</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:phone +33387000000"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:phone +33387000000"</code></td>
 </tr>
 <tr>
 <td>c:geo</td>
 <td>Geolocation (latitude,longitude)</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:geo 49.1003985,6.1835716"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:geo 49.1003985,6.1835716"</code></td>
 </tr>
 <tr>
 <td>c:name</td>
 <td>Contact name</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:name Antony Zanetti"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:name Antony Zanetti"</code></td>
 </tr>
 <tr>
 <td>c:addr</td>
 <td>Full Postal Address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:addr 57 rue Lothaire, 57000 Metz, France"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:addr 57 rue Lothaire, 57000 Metz, France"</code></td>
 </tr>
 <tr>
 <td>c:addr.street</td>
 <td>Street part of the postal address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:street 57 rue Lothaire"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:street 57 rue Lothaire"</code></td>
 </tr>
 <tr>
 <td>c:addr.city</td>
 <td>City part of the postal address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:city Metz"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:city Metz"</code></td>
 </tr>
 <tr>
 <td>c:addr.zip</td>
 <td>Zipcode part of the postal address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.zip 57000"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:addr.zip 57000"</code></td>
 </tr>
 <tr>
 <td>c:addr.state</td>
 <td>State part of the postal address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.state Lorraine"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:addr.state Lorraine"</code></td>
 </tr>
 <tr>
 <td>c:addr.country</td>
 <td>Country part of the postal address</td>
-<td><code>opencdf.org. IN TXT "v=cdf1 c:addr.country France"</code></td>
+<td><code>opencdf.org. 600 IN TXT "v=cdf1 c:addr.country France"</code></td>
 </tr>
 </tbody>
 </table><p><strong>There is no mandatory attributes</strong> and an attribute can be used more than once if needed.</p>
