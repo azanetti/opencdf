@@ -13,7 +13,7 @@ Example
 The following example is a CDF record defining the email address that needs to be used to contact opencdf.org entity:
 
 ```
-opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"
+opencdf.org. 600 IN TXT "v=cdf1 c:email contact@opencdf.org"
 ```
 
 Why using DNS to store information?
@@ -43,16 +43,16 @@ List of the current supported attributes
 
 Attribute | Description | Example
 --- | --- | ---
-c:email | Email address | `opencdf.org. IN TXT "v=cdf1 c:email contact@opencdf.org"`
-c:phone | Phone | `opencdf.org. IN TXT "v=cdf1 c:phone +33387000000"`
-c:geo | Geolocation (latitude,longitude) | `opencdf.org. IN TXT "v=cdf1 c:geo 49.1003985,6.1835716"`
-c:name | Contact name | `opencdf.org. IN TXT "v=cdf1 c:name Antony Zanetti"`
-c:addr | Full Postal Address | `opencdf.org. IN TXT "v=cdf1 c:addr 57 rue Lothaire, 57000 Metz, France"` |
-c:addr.street | Street part of the postal address | `opencdf.org. IN TXT "v=cdf1 c:street 57 rue Lothaire"` |
-c:addr.city | City part of the postal address | `opencdf.org. IN TXT "v=cdf1 c:city Metz"` |
-c:addr.zip | Zipcode part of the postal address | `opencdf.org. IN TXT "v=cdf1 c:addr.zip 57000"` |
-c:addr.state | State part of the postal address | `opencdf.org. IN TXT "v=cdf1 c:addr.state Lorraine"` |
-c:addr.country | Country part of the postal address | `opencdf.org. IN TXT "v=cdf1 c:addr.country France"` |
+c:email | Email address | `opencdf.org. 600 IN TXT "v=cdf1 c:email contact@opencdf.org"`
+c:phone | Phone | `opencdf.org. 600 IN TXT "v=cdf1 c:phone +33387000000"`
+c:geo | Geolocation (latitude,longitude) | `opencdf.org. 600 IN TXT "v=cdf1 c:geo 49.1003985,6.1835716"`
+c:name | Contact name | `opencdf.org. 600 IN TXT "v=cdf1 c:name Antony Zanetti"`
+c:addr | Full Postal Address | `opencdf.org. 600 IN TXT "v=cdf1 c:addr 57 rue Lothaire, 57000 Metz, France"` |
+c:addr.street | Street part of the postal address | `opencdf.org. 600 IN TXT "v=cdf1 c:street 57 rue Lothaire"` |
+c:addr.city | City part of the postal address | `opencdf.org. 600 IN TXT "v=cdf1 c:city Metz"` |
+c:addr.zip | Zipcode part of the postal address | `opencdf.org. 600 IN TXT "v=cdf1 c:addr.zip 57000"` |
+c:addr.state | State part of the postal address | `opencdf.org. 600 IN TXT "v=cdf1 c:addr.state Lorraine"` |
+c:addr.country | Country part of the postal address | `opencdf.org. 600 IN TXT "v=cdf1 c:addr.country France"` |
 
 **There is no mandatory attributes** and an attribute can be used more than once if needed.
 
